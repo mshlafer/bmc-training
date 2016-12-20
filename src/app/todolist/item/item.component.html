@@ -1,0 +1,16 @@
+<li [ngClass]="{ completed: item.done }">
+  <div class="view">
+    <input class="toggle" 
+           (change)="item.done = !item.done"
+           [checked]="item.done"
+           type="checkbox">
+
+    <label appMarker>{{ item.title | bmcUp:"!" }} {{ item.created | date }}</label>
+
+    <button (click)="todolist.removeItem(item)" class="destroy"></button>
+
+  </div>
+
+  <input class="edit">
+
+</li>

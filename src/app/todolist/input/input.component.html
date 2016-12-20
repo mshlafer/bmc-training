@@ -1,0 +1,6 @@
+<input class="new-todo" 
+       #itemInput 
+       type="text"             
+       (keydown.enter)="onValue.emit(itemInput.value)"
+       placeholder="What needs to be done?" 
+       autofocus>

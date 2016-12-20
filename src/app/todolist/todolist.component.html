@@ -1,0 +1,21 @@
+<section class="todoapp">
+
+  <app-header>
+    <app-title title="HELLO"></app-title>
+    <app-input (onValue)="todolist.addItem($event)" ></app-input>
+  </app-header>
+
+  <app-main>
+
+   <app-toggle *appBmcIf="flag" (toggle)="todolist.toggleItems()"></app-toggle>
+  
+    <app-list [list]="todolist.getItems()"></app-list>
+  </app-main>
+
+  <app-footer>
+    <app-counter></app-counter>
+    <app-clear-btn label="clear copletos"  
+                   (clear)="todolist.removeItem()" ></app-clear-btn>
+  </app-footer>
+
+</section>
