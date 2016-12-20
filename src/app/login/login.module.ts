@@ -1,3 +1,4 @@
+import { TodolistComponent } from './../todolist/todolist.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';

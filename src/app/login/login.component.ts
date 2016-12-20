@@ -1,6 +1,7 @@
 import { BmcValidators } from './bmc-validators';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { Router} from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -13,8 +14,11 @@ export class LoginComponent {
   public loginForm: FormGroup;
   public username: FormControl;
   public password: FormControl;
+  private router: Router;
 
-  constructor() {
+  constructor(router: Router) {
+
+    this.router = router;
 
     this.username = new FormControl('',
       Validators.compose([
@@ -34,8 +38,7 @@ export class LoginComponent {
   }
 
   public login() {
-    console.log(` required: ${this.username.valid}`)
-    console.log(` isNir: ${this.username.errors}`)
+    this.router.navigate(['list']);
   }
 
 }
