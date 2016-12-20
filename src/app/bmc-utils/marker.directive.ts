@@ -21,6 +21,4 @@ export class MarkerDirective {
    private removeBackground(){
      this.renderer.setElementStyle(this.element.nativeElement,'background-color','');
    }
-
-
 }

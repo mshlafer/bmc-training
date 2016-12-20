@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm"
+      (ngSubmit)="login()"
+      novalidate>
+
+  <input type="text"        
+         name="username"
+         formControlName="username"
+         placeholder="username">
+         
+  <span *ngIf="username.errors?.isNir">can't use nir!</span>       
+  <span *ngIf="username.invalid">is required</span>       
+
+  <input type="password"         
+         name="password" 
+         formControlName="password"
+         placeholder="password">
+
+  <button type="submit">Login</button>
+
+</form>
