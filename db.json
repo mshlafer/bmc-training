@@ -1,0 +1,19 @@
+{
+    "user": {
+        "id": 1234,
+        "username": "nir kaufman",
+        "token": "145627XYZ"
+    },
+    "items": [
+        {
+            "id": 1,
+            "title": "Task from server",
+            "done" : false
+        },
+        {
+            "id": 2,
+            "title": "Learn Http",
+            "done": true
+        }
+    ]
+}

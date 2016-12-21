@@ -10,7 +10,7 @@ import { Router} from '@angular/router'
 })
 
 export class LoginComponent {
-  
+
   public loginForm: FormGroup;
   public username: FormControl;
   public password: FormControl;
@@ -37,7 +37,7 @@ export class LoginComponent {
     })
   }
 
-  public login() {
+  public login() {    
     this.router.navigate(['list']);
   }
 
